@@ -7,7 +7,7 @@ import {exerciseOptions, fetchData} from '../utils/fetchData';
 
 
  
-const Exercises = ({exercises,setEcercises,bodypart}) => {
+const Exercises = ({exercises,setExercises,bodyPart}) => {
 
   const[currentPage,setCurrentPage]= useState(1);
   const exercisePerPage = 9;
@@ -21,6 +21,21 @@ const Exercises = ({exercises,setEcercises,bodypart}) => {
          window.scrollTo({top:1800,behavior:'smooth'})
   }
 
+  useEffect(()=>{
+    const fetchExercisesData = async () =>{
+    let exercisesData = [];
+
+    if(bodyPart === 'all'){
+      exercisesData = await fetchData('https://exercisedb.p.rapidapi.com/exercises',exerciseOptions);
+    }else{
+      exercisesData = await fetchData(`https://exercisedb.p.rapidapi.com/exercises/bodyPart/${bodyPart}`,exerciseOptions);
+    }
+    setExercises(exercisesData);
+  }
+  
+  fetchExercisesData();
+  },[bodyPart])
+
 
   return (
     <Box id="exercises" sx={{mt:{lg:'110px'}}} mt="50px" p='20px'>
@@ -32,9 +47,9 @@ const Exercises = ({exercises,setEcercises,bodypart}) => {
             <ExerciseCard key={index} exercise={exercise}/>
           ))}
       </Stack>
-      <Stack mt="100px" alightItems="center">
+      <Stack mt="100px" alignItems="center">
         {exercises.length>9 && (
-          <Pagination color="standard" shape="round" defaultPage={1} count={Math.ceil(exercises.length/ exercisePerPage)} page={currentPage} onChange={paginate} size="large"/>
+          <Pagination color="standard" shape="rounded" defaultPage={1} count={Math.ceil(exercises.length/ exercisePerPage)} page={currentPage} onChange={paginate} size="large"/>
         )}
 
       </Stack>
