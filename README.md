@@ -19,3 +19,6 @@
 **step 3:** type npm install (to install repositories)</br>
 **step 4:** change API key in .env folder to your key from rapidAPI</br>
 **step 5:** in terminal type npm start</br>
+
+## Happy Coding 💜 
+## leave a star if helpful
