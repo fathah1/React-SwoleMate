@@ -14,8 +14,8 @@
 `Node js`
 
 ### How to use
-** step 1: ** clone or download the repository
-** step 2: ** open terminal at folder 
-** step 3: ** type npm install (to install repositories)
-** step 4: ** change API key in .env folder to your key from rapidAPI
-** step 5: ** in terminal type npm start
+**step 1:** clone or download the repository </br>
+**step 2:** open terminal at folder </br>
+**step 3:** type npm install (to install repositories)</br>
+**step 4:** change API key in .env folder to your key from rapidAPI</br>
+**step 5:** in terminal type npm start</br>
