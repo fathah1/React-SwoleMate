@@ -4,7 +4,7 @@
 
 
 ### used API's
-`ExerciseDB` (https://rapidapi.com/justin-WFnsXH_t6/api/exercisedb)
+`ExerciseDB` (https://rapidapi.com/justin-WFnsXH_t6/api/exercisedb) </br>
 `Youtube Search and download` (https://rapidapi.com/h0p3rwe/api/youtube-search-and-download)
 
 ###Technologies used
